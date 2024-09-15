@@ -1381,41 +1381,5 @@ script = ExtResource("1_gwpey")
 tile_map_data = PackedByteArray("AAAAAAAAAAAJAAwAAAAAAAEAAAAKAAsAAAAAAAIAAAAKAAsAAAAAAAMAAAAKAAsAAAAAAAcAAAAKAAsAAAAAAAgAAAAKAAsAAAAAAAkAAAAKAAsAAAAAAAoAAAAIAAwAAAABAAAAAAANAAwAAAABAAoAAAANAAwAAAACAAAAAAANAAwAAAACAAoAAAANAAwAAAADAAAAAAANAAwAAAADAAoAAAANAAwAAAAHAAAAAAANAAwAAAAHAAoAAAANAAwAAAAIAAAAAAANAAwAAAAIAAoAAAANAAwAAAAJAAAAAAANAAwAAAAJAAoAAAANAAwAAAAKAAAAAAALAAsAAAAKAAEAAAAKAAsAAAAKAAIAAAAKAAsAAAAKAAMAAAAKAAsAAAAKAAcAAAAKAAsAAAAKAAgAAAAKAAsAAAAKAAkAAAAKAAsAAAAKAAoAAAAMAAsAAAA=")
 tile_set = SubResource("TileSet_agfpi")
 
-[node name="NorthWallComponent" type="TileMapLayer" parent="." groups=["Wall"]]
-tile_map_data = PackedByteArray("AAAEAAAAAAANAAwAAAAFAAAAAAANAAwAAAAGAAAAAAANAAwAAAA=")
-tile_set = SubResource("TileSet_agfpi")
-
-[node name="NorthDoorComponent" type="TileMapLayer" parent="."]
-visible = false
-tile_map_data = PackedByteArray("AAAEAAAAAAAOAAsAAAAGAAAAAAAEAA0AAAAGAP//AAADAAsAAAAGAP7/AAADAAsAAAAGAP3/AAAAAAAAAAAEAP//AAADAAsAAAAEAP7/AAADAAsAAAAEAP3/AAAAAAAAAAAFAAAAAAAAAAAAAAAFAP//AAAAAAAAAAAFAP7/AAAAAAAAAAAFAP3/AAAAAAAAAAA=")
-tile_set = SubResource("TileSet_agfpi")
-
-[node name="SouthWallComponent" type="TileMapLayer" parent="." groups=["Wall"]]
-tile_map_data = PackedByteArray("AAAEAAoAAAANAAwAAAAFAAoAAAANAAwAAAAGAAoAAAANAAwAAAA=")
-tile_set = SubResource("TileSet_agfpi")
-
-[node name="SouthDoorComponent" type="TileMapLayer" parent="."]
-visible = false
-tile_map_data = PackedByteArray("AAAEAAoAAAAIAAsAAAAGAAoAAAAFAA0AAAAEAAsAAAADAAsAAAAGAAsAAAADAAsAAAAGAAwAAAADAAsAAAAEAAwAAAADAAsAAAAEAA0AAAAAAAAAAAAGAA0AAAAAAAAAAAAFAA0AAAAAAAAAAAAFAAwAAAAAAAAAAAAFAAsAAAAAAAAAAAAFAAoAAAAAAAAAAAA=")
-tile_set = SubResource("TileSet_agfpi")
-
-[node name="EastWallComponent" type="TileMapLayer" parent="." groups=["Wall"]]
-tile_map_data = PackedByteArray("AAAKAAYAAAAKAAsAAAAKAAUAAAAKAAsAAAAKAAQAAAAKAAsAAAA=")
-tile_set = SubResource("TileSet_agfpi")
-
-[node name="EastDoorComponent" type="TileMapLayer" parent="."]
-visible = false
-tile_map_data = PackedByteArray("AAAKAAYAAAAGAA0AAAAKAAQAAAADAA0AAAALAAQAAAAEAAwAAAAMAAQAAAAEAAwAAAANAAQAAAAAAAAAAAALAAYAAAAEAAwAAAAMAAYAAAAEAAwAAAANAAYAAAAAAAAAAAAMAAUAAAAAAAAAAAALAAUAAAAAAAAAAAAKAAUAAAAAAAAAAAA=")
-tile_set = SubResource("TileSet_agfpi")
-
-[node name="WestWallComponent" type="TileMapLayer" parent="." groups=["Wall"]]
-tile_map_data = PackedByteArray("AAAAAAYAAAAKAAsAAAAAAAUAAAAKAAsAAAAAAAQAAAAKAAsAAAA=")
-tile_set = SubResource("TileSet_agfpi")
-
-[node name="WestDoorComponent" type="TileMapLayer" parent="."]
-visible = false
-tile_map_data = PackedByteArray("AAAAAAQAAAANAAsAAAD9/wYAAAAAAAAAAAD//wQAAAAEAAwAAAD+/wQAAAAEAAwAAAD9/wQAAAAAAAAAAAD+/wYAAAAEAAwAAAD//wYAAAAEAAwAAAAAAAYAAAAHAAsAAAD9/wUAAAAAAAAAAAD+/wUAAAAAAAAAAAD//wUAAAAAAAAAAAAAAAUAAAAAAAAAAAA=")
-tile_set = SubResource("TileSet_agfpi")
-
 [node name="DoorGenComponent" type="Node" parent="."]
 script = ExtResource("2_ob21a")

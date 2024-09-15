@@ -13,15 +13,15 @@ public partial class RoomData : Node2D
 
 	public static Vector2 position {get; set;} = new Vector2(0, 0);
 
-	public static TileMapLayer NorthWall {get; set;}
-	public static TileMapLayer SouthWall{get; set;}
-	public static TileMapLayer EastWall{get; set;}
-	public static TileMapLayer WestWall {get; set;}
+	public static PackedScene NorthWall = GD.Load<PackedScene>("res://assets/objects/room/north_wall_component.tscn"); 
+	public static PackedScene SouthWall = GD.Load<PackedScene>("res://assets/objects/room/south_wall_component.tscn"); 
+	public static PackedScene EastWall = GD.Load<PackedScene>("res://assets/objects/room/east_wall_component.tscn"); 
+	public static PackedScene WestWall = GD.Load<PackedScene>("res://assets/objects/room/west_wall_component.tscn"); 
 
-	public static TileMapLayer NorthDoor {get; set;}
-	public static TileMapLayer SouthDoor {get; set;}
-	public static TileMapLayer EastDoor {get; set;}
-	public static TileMapLayer WestDoor {get; set;}
+	public static PackedScene NorthDoor = GD.Load<PackedScene>("res://assets/objects/room/north_door_component.tscn"); 
+	public static PackedScene SouthDoor = GD.Load<PackedScene>("res://assets/objects/room/south_door_component.tscn"); 
+	public static PackedScene EastDoor = GD.Load<PackedScene>("res://assets/objects/room/east_door_component.tscn"); 
+	public static PackedScene WestDoor = GD.Load<PackedScene>("res://assets/objects/room/west_door_component.tscn"); 
 
 
     public override void _Ready()
@@ -32,16 +32,6 @@ public partial class RoomData : Node2D
 
     {
         
-		
-		NorthWall = GetNode<TileMapLayer>("NorthWallComponent");
-		SouthWall = GetNode<TileMapLayer>("SouthWallComponent");
-		EastWall = GetNode<TileMapLayer>("EastWallComponent");
-		WestWall = GetNode<TileMapLayer>("WestWallComponent");
-
-		NorthDoor = GetNode<TileMapLayer>("NorthDoorComponent");
-		SouthDoor = GetNode<TileMapLayer>("SouthDoorComponent");
-		EastDoor = GetNode<TileMapLayer>("EastDoorComponent");
-		WestDoor = GetNode<TileMapLayer>("WestDoorComponent");
     }
 
 	public override void _Process(double delta)

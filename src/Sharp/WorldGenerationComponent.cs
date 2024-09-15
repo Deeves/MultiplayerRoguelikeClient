@@ -157,42 +157,61 @@ public partial class WorldGenerationComponent : Node
 		{
 			for (int y = 0; y < MapHeight; y++)
 			{
-				if (Map[x][y] != null)
+				if (Map[x][y] == null)
 				{
 					continue;
 				}
 
 				Node2D room = (Node2D)WorldData.room.Instantiate();
 				room.Position = new Godot.Vector2(x, y) * 816;
+				AddChild(room);
 				
+				var doorGenComponent = room.GetNode<DoorGenComponent>("DoorGenComponent");
+				GD.Print($"Processing room at {x}, {y})");
+
 				// if there is a room to the north, then place a door
 				if (y>0 && Map[x][y-1] != null)
 				{
-					var doorGenComponent = room.GetNode<DoorGenComponent>("DoorGenComponent"); 
+					GD.Print("Placing North Door");
 					doorGenComponent.NorthDoor();
+				}
+				else
+				{
+					GD.Print("Placing North Wall");
+					doorGenComponent.NorthWall();
 				}
 
 				// if there is a room to the south, then place a door
 				if (y < MapHeight - 1 && Map[x][y + 1] != null)
 				{
-					var doorGenComponent = room.GetNode<DoorGenComponent>("DoorGenComponent");
 					doorGenComponent.SouthDoor();
+				}
+				else
+				{
+					doorGenComponent.SouthWall();
 				}
 
 				// if there is a room to the east, then place a door
 				if (x < MapWidth - 1 && Map[x + 1][y] != null)
 				{
-					var doorGenComponent = room.GetNode<DoorGenComponent>("DoorGenComponent");
 					doorGenComponent.EastDoor();
+				}
+				else
+				{
+					doorGenComponent.EastWall();
 				}
 
 				// if there is a room to the west, then place a door
 				if (x > 0 && Map[x - 1][y] != null)
 				{
-					var doorGenComponent = room.GetNode<DoorGenComponent>("DoorGenComponent");
 					doorGenComponent.WestDoor();
 				}
-				CallDeferred("add_child", room);
+				else
+				{
+					doorGenComponent.WestWall();
+				}
+
+				//CallDeferred("add_child", room);
 				WorldData.roomNodes.Add(room);
 			}
 		}

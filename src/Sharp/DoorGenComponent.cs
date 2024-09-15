@@ -13,10 +13,9 @@ public partial class DoorGenComponent : Node
 {
 public void NorthDoor()
     {
-        if (RoomData.NorthDoor != null && RoomData.NorthWall != null)
+        if (RoomData.NorthDoor != null)
         {
-            RoomData.NorthDoor.Visible = true;
-            RoomData.NorthWall.QueueFree();
+            RoomData.NorthDoor.Instantiate();
         }
         else
         {
@@ -26,10 +25,9 @@ public void NorthDoor()
 
     public void SouthDoor()
     {
-        if (RoomData.SouthDoor != null && RoomData.SouthWall != null)
+        if (RoomData.SouthDoor != null)
         {
-            RoomData.SouthDoor.Visible = true;
-            RoomData.SouthWall.QueueFree();
+            RoomData.SouthDoor.Instantiate();
         }
         else
         {
@@ -41,8 +39,7 @@ public void NorthDoor()
     {
         if (RoomData.EastDoor != null && RoomData.EastWall != null)
         {
-            RoomData.EastDoor.Visible = true;
-            RoomData.EastWall.QueueFree();
+            RoomData.EastDoor.Instantiate();
         }
         else
         {
@@ -54,12 +51,64 @@ public void NorthDoor()
     {
         if (RoomData.WestDoor != null && RoomData.WestWall != null)
         {
-            RoomData.WestDoor.Visible = true;
-            RoomData.WestWall.QueueFree();
+            RoomData.WestDoor.Instantiate();
         }
         else
         {
             GD.PrintErr("WestDoor or WestWall is null");
+        }
+    }
+
+    public void NorthWall()
+    {
+        if (RoomData.NorthWall != null)
+        {
+            var instance = RoomData.NorthWall.Instantiate();
+            AddChild(instance);
+            GD.Print("NorthWall instantiated");
+        }
+        else
+        {
+            GD.PrintErr("NorthWall is null");
+        }
+    }
+
+    public void SouthWall()
+    {
+        if (RoomData.SouthWall != null)
+        {
+            var instance = RoomData.SouthWall.Instantiate();
+            AddChild(instance);
+        }
+        else
+        {
+            GD.PrintErr("SouthWall is null");
+        }
+    }
+
+    public void EastWall()
+    {
+        if (RoomData.EastWall != null)
+        {
+            var instance = RoomData.EastWall.Instantiate();
+            AddChild(instance);
+        }
+        else
+        {
+            GD.PrintErr("EastWall is null");
+        }
+    }
+
+    public void WestWall()
+    {
+        if (RoomData.WestWall != null)
+        {
+            var instance = RoomData.WestWall.Instantiate();
+            AddChild(instance);
+        }
+        else
+        {
+            GD.PrintErr("WestWall is null");
         }
     }
 

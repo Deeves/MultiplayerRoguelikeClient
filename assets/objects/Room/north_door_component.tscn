@@ -1373,6 +1373,5 @@ sources/0 = SubResource("TileSetAtlasSource_ktsur")
 sources/1 = SubResource("TileSetAtlasSource_ds2c6")
 
 [node name="NorthDoorComponent" type="TileMapLayer"]
-visible = false
 tile_map_data = PackedByteArray("AAAEAAAAAAAOAAsAAAAGAAAAAAAEAA0AAAAGAP//AAADAAsAAAAGAP7/AAADAAsAAAAGAP3/AAAAAAAAAAAEAP//AAADAAsAAAAEAP7/AAADAAsAAAAEAP3/AAAAAAAAAAAFAAAAAAAAAAAAAAAFAP//AAAAAAAAAAAFAP7/AAAAAAAAAAAFAP3/AAAAAAAAAAA=")
 tile_set = SubResource("TileSet_agfpi")
