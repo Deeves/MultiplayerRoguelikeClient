@@ -1,0 +1,30 @@
+[gd_scene load_steps=7 format=3 uid="uid://c5uscuf0oovtv"]
+
+[ext_resource type="Script" path="res://src/Sharp/SpiritData.cs" id="1_ath88"]
+[ext_resource type="Texture2D" uid="uid://dyntum707xvpr" path="res://assets/sprites/ascii sprite sheet.png" id="1_y8yjr"]
+[ext_resource type="Script" path="res://src/GDScript/MoveComponent.gd" id="2_0m4ip"]
+[ext_resource type="Script" path="res://src/Sharp/SpriteComponent.cs" id="4_e0h8a"]
+[ext_resource type="Script" path="res://src/Sharp/CameraComponent.cs" id="5_mkww7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t5muk"]
+size = Vector2(64, 64)
+
+[node name="SpiritData" type="Node2D"]
+script = ExtResource("1_ath88")
+
+[node name="MoveComponent" type="CharacterBody2D" parent="."]
+script = ExtResource("2_0m4ip")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MoveComponent"]
+shape = SubResource("RectangleShape2D_t5muk")
+
+[node name="SpriteComponent" type="Sprite2D" parent="MoveComponent"]
+position = Vector2(2.38419e-06, 0)
+scale = Vector2(1.33333, 1.14286)
+texture = ExtResource("1_y8yjr")
+region_enabled = true
+region_rect = Rect2(8, 264, 48, 56)
+script = ExtResource("4_e0h8a")
+
+[node name="CameraComponent" type="Camera2D" parent="MoveComponent"]
+script = ExtResource("5_mkww7")

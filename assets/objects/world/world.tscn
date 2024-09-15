@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://bv4y02bbw0beg"]
+
+[ext_resource type="Script" path="res://src/Sharp/WorldData.cs" id="1_imvcp"]
+[ext_resource type="PackedScene" uid="uid://c5uscuf0oovtv" path="res://assets/objects/entity/spirit.tscn" id="3_sop1a"]
+[ext_resource type="Script" path="res://src/Sharp/WorldGenerationComponent.cs" id="4_vvh5g"]
+
+[node name="WorldData" type="Node"]
+script = ExtResource("1_imvcp")
+
+[node name="SpiritData" parent="." instance=ExtResource("3_sop1a")]
+position = Vector2(32, 32)
+
+[node name="WorldGenerationComponent" type="Node" parent="."]
+script = ExtResource("4_vvh5g")
