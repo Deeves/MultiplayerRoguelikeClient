@@ -6,10 +6,7 @@
 atlas = ExtResource("1_a5wu5")
 region = Rect2(128, 0, 64, 64)
 
-[node name="EntityData" type="Node"]
-
-[node name="PositionComponent" type="Node2D" parent="."]
-position = Vector2(695, 192)
+[node name="EntityData" type="Node2D"]
 
 [node name="SpriteComponent" type="CanvasGroup" parent="."]
 position = Vector2(0, 1)
