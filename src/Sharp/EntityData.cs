@@ -12,6 +12,8 @@ public partial class EntityData : Node2D
 
 	public static bool isPossesable = false;
 
+	public static Guid possesedBy;
+
 	public static int health = 100;
 
 	public static int damage = 10;

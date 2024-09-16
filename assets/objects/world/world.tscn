@@ -11,8 +11,8 @@ script = ExtResource("1_imvcp")
 [node name="SpiritData" parent="." instance=ExtResource("3_sop1a")]
 position = Vector2(32, 32)
 
-[node name="WorldGenerationComponent" type="Node" parent="."]
-script = ExtResource("4_vvh5g")
-
 [node name="EntityData" parent="." instance=ExtResource("4_i8onr")]
 position = Vector2(32, 155)
+
+[node name="WorldGenerationComponent" type="Node" parent="."]
+script = ExtResource("4_vvh5g")
