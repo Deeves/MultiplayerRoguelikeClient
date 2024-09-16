@@ -1,19 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://bwtj6nucrg1qg"]
+[gd_scene load_steps=4 format=3 uid="uid://bwtj6nucrg1qg"]
 
-[ext_resource type="Texture2D" uid="uid://dyntum707xvpr" path="res://assets/sprites/ascii sprite sheet.png" id="1_a5wu5"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3ahim"]
-atlas = ExtResource("1_a5wu5")
-region = Rect2(128, 0, 64, 64)
+[ext_resource type="Script" path="res://src/Sharp/EntityData.cs" id="1_54iio"]
+[ext_resource type="Texture2D" uid="uid://1qi5lq8le1pt" path="res://assets/sprites/entity sprite sheet.png" id="2_740rb"]
+[ext_resource type="Script" path="res://src/Sharp/SpriteComponent.cs" id="2_c7vnj"]
 
 [node name="EntityData" type="Node2D"]
+script = ExtResource("1_54iio")
 
-[node name="SpriteComponent" type="CanvasGroup" parent="."]
-position = Vector2(0, 1)
-
-[node name="ForegroundSpriteComponent" type="Sprite2D" parent="SpriteComponent"]
-position = Vector2(649, 226)
-texture = SubResource("AtlasTexture_3ahim")
-
-[node name="BackroundSpriteComponent" type="AnimatedSprite2D" parent="SpriteComponent"]
-position = Vector2(0, -1)
+[node name="SpriteComponent" type="Sprite2D" parent="."]
+scale = Vector2(5.33333, 4.57143)
+texture = ExtResource("2_740rb")
+region_enabled = true
+region_rect = Rect2(444, 35, 12, 14)
+script = ExtResource("2_c7vnj")
