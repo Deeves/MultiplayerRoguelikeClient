@@ -1,11 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://bwtj6nucrg1qg"]
+[gd_scene load_steps=5 format=3 uid="uid://bwtj6nucrg1qg"]
 
 [ext_resource type="Script" path="res://src/Sharp/EntityData.cs" id="1_54iio"]
 [ext_resource type="Texture2D" uid="uid://1qi5lq8le1pt" path="res://assets/sprites/entity sprite sheet.png" id="2_740rb"]
 [ext_resource type="Script" path="res://src/Sharp/SpriteComponent.cs" id="2_c7vnj"]
+[ext_resource type="Texture2D" uid="uid://dyntum707xvpr" path="res://assets/sprites/ascii sprite sheet.png" id="2_grdg0"]
 
 [node name="EntityData" type="Node2D"]
 script = ExtResource("1_54iio")
+
+[node name="BackroundComponent" type="Sprite2D" parent="."]
+modulate = Color(0.2, 0.2, 0.2, 1)
+position = Vector2(2.38419e-06, 0)
+scale = Vector2(1.33333, 1.14286)
+texture = ExtResource("2_grdg0")
+region_enabled = true
+region_rect = Rect2(704, 832, 64, 64)
 
 [node name="SpriteComponent" type="Sprite2D" parent="."]
 scale = Vector2(5.33333, 4.57143)
@@ -13,3 +22,5 @@ texture = ExtResource("2_740rb")
 region_enabled = true
 region_rect = Rect2(444, 35, 12, 14)
 script = ExtResource("2_c7vnj")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]

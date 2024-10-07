@@ -18,6 +18,14 @@ script = ExtResource("2_0m4ip")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MoveComponent"]
 shape = SubResource("RectangleShape2D_t5muk")
 
+[node name="BackroundComponent" type="Sprite2D" parent="MoveComponent"]
+modulate = Color(0.2, 0.2, 0.2, 1)
+position = Vector2(2.38419e-06, 0)
+scale = Vector2(1.33333, 1.14286)
+texture = ExtResource("1_y8yjr")
+region_enabled = true
+region_rect = Rect2(704, 832, 64, 64)
+
 [node name="SpriteComponent" type="Sprite2D" parent="MoveComponent"]
 position = Vector2(2.38419e-06, 0)
 scale = Vector2(1.33333, 1.14286)

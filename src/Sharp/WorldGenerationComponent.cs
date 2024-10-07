@@ -55,7 +55,7 @@ public partial class WorldGenerationComponent : Node
 	*/
 	{
 		CheckRoom(3, 3, RoomsToGenerate, new Godot.Vector2(0, 0), true);
-		instatniateRooms();
+		//instatniateRooms();
 		String Preview = "";
 		for (int i = 0; i < MapWidth; i++)
 		{

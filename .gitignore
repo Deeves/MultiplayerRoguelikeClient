@@ -10,6 +10,7 @@ export_presets.cfg
 *.translation
 
 # Mono-specific ignores
+.vscode/
 .mono/
 data_*/
 mono_crash.*.json
